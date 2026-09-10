@@ -1,0 +1,3655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AY Décor & Furniture — Where Comfort Meets Elegance. Luxury furniture and interior design in Abuja, Nigeria.">
+<title>AY Décor & Furniture | Where Comfort Meets Elegance</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --black:#11100f;
+  --dark:#1c1917;
+  --cream:#f5f1eb;
+  --white:#fff;
+  --gold:#b9955b;
+  --gold2:#d2b47d;
+  --text:#292522;
+  --muted:#77716b;
+  --line:#ded8d0;
+  --success:#52745a;
+  --danger:#9a4d4d;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"DM Sans",sans-serif;
+  background:var(--cream);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+button,input,textarea,select{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+.page{
+  display:none;
+  min-height:calc(100vh - 78px);
+  animation:pageIn .3s ease;
+}
+
+.page.active{
+  display:block;
+}
+
+@keyframes pageIn{
+  from{
+    opacity:0;
+    transform:translateY(8px);
+  }
+  to{
+    opacity:1;
+    transform:none;
+  }
+}
+
+.container{
+  width:min(1180px,90%);
+  margin:auto;
+}
+
+.section{
+  padding:100px 0;
+}
+
+.section-label{
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:10px;
+  font-weight:700;
+  margin-bottom:15px;
+}
+
+h1,h2,h3{
+  font-family:"Playfair Display",serif;
+  font-weight:600;
+}
+
+h1{
+  font-size:clamp(46px,7vw,88px);
+  line-height:.98;
+}
+
+h2{
+  font-size:clamp(34px,5vw,57px);
+  line-height:1.06;
+}
+
+h3{
+  font-size:23px;
+}
+
+p{
+  line-height:1.8;
+  color:var(--muted);
+}
+
+/* HEADER */
+
+header{
+  height:78px;
+  padding:0 5%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:rgba(255,255,255,.98);
+  border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+  z-index:2000;
+}
+
+.logo{
+  background:none;
+  border:0;
+  text-align:left;
+  font-family:"Playfair Display",serif;
+  font-size:24px;
+  font-weight:700;
+  line-height:1;
+}
+
+.logo small{
+  display:block;
+  color:var(--gold);
+  font-family:"DM Sans",sans-serif;
+  font-size:7px;
+  letter-spacing:3px;
+  text-align:center;
+  margin-top:6px;
+}
+
+nav{
+  display:flex;
+  gap:25px;
+  align-items:center;
+}
+
+nav button{
+  background:none;
+  border:0;
+  font-size:12px;
+  color:#38332f;
+}
+
+nav button:hover,
+nav button.active{
+  color:var(--gold);
+}
+
+.menu{
+  display:none;
+  background:none;
+  border:0;
+  font-size:26px;
+}
+
+/* BUTTONS */
+
+.btn{
+  border:1px solid var(--gold);
+  background:var(--gold);
+  color:#fff;
+  min-height:50px;
+  padding:0 26px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-transform:uppercase;
+  letter-spacing:1.4px;
+  font-size:10px;
+  font-weight:700;
+  transition:.25s;
+}
+
+.btn:hover{
+  background:#957441;
+  border-color:#957441;
+  transform:translateY(-2px);
+}
+
+.btn-outline{
+  background:transparent;
+  color:var(--gold);
+}
+
+.btn-dark{
+  background:var(--dark);
+  border-color:var(--dark);
+}
+
+.buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+/* HERO */
+
+.hero{
+  min-height:calc(100vh - 78px);
+  background:
+  linear-gradient(90deg,rgba(0,0,0,.76),rgba(0,0,0,.15)),
+  url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2200&q=90")
+  center/cover;
+  color:#fff;
+  display:flex;
+  align-items:center;
+}
+
+.hero-content{
+  width:min(1180px,90%);
+  margin:auto;
+}
+
+.hero p{
+  color:#eee;
+  max-width:620px;
+  margin:25px 0 32px;
+  font-size:16px;
+}
+
+/* PAGE HERO */
+
+.page-hero{
+  background:var(--dark);
+  color:#fff;
+  min-height:390px;
+  display:flex;
+  align-items:center;
+}
+
+.page-hero p{
+  color:#c7c0b8;
+  max-width:650px;
+  margin-top:20px;
+}
+
+/* HOME INTRO */
+
+.two-column{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+
+.two-column p{
+  margin:20px 0;
+}
+
+.photo{
+  overflow:hidden;
+}
+
+.photo img{
+  height:530px;
+  object-fit:cover;
+  transition:.5s;
+}
+
+.photo:hover img{
+  transform:scale(1.03);
+}
+
+/* PRODUCTS */
+
+.products-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:20px;
+  margin-bottom:35px;
+}
+
+.products-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.product{
+  background:#fff;
+  border:1px solid var(--line);
+  overflow:hidden;
+}
+
+.product-img{
+  overflow:hidden;
+}
+
+.product-img img{
+  height:320px;
+  object-fit:cover;
+  transition:.5s;
+}
+
+.product:hover .product-img img{
+  transform:scale(1.05);
+}
+
+.product-info{
+  padding:22px;
+}
+
+.product-info p{
+  font-size:13px;
+  margin:8px 0 15px;
+}
+
+.price{
+  color:var(--gold);
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-weight:700;
+  margin-bottom:16px;
+}
+
+.product-link{
+  border:0;
+  background:none;
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+  font-size:10px;
+  font-weight:700;
+}
+
+.filters{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:30px;
+}
+
+.filter{
+  padding:11px 18px;
+  background:#fff;
+  border:1px solid var(--line);
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-size:9px;
+}
+
+.filter.active{
+  color:#fff;
+  background:var(--gold);
+  border-color:var(--gold);
+}
+
+/* DARK BANNER */
+
+.dark-banner{
+  background:var(--dark);
+  color:#fff;
+  padding:90px 6%;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:55px;
+  align-items:center;
+}
+
+.dark-banner p{
+  color:#c5beb6;
+  margin:22px 0;
+}
+
+.dark-banner img{
+  height:500px;
+  object-fit:cover;
+}
+
+/* VALUES */
+
+.values{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border:1px solid var(--line);
+  gap:1px;
+  background:var(--line);
+}
+
+.value{
+  background:#fff;
+  padding:40px;
+}
+
+.value-number{
+  color:var(--gold);
+  letter-spacing:2px;
+  font-size:11px;
+  margin-bottom:30px;
+}
+
+.value p{
+  margin-top:12px;
+}
+
+/* SERVICES */
+
+.service-list{
+  border-top:1px solid var(--line);
+}
+
+.service{
+  display:grid;
+  grid-template-columns:70px 1fr 1.4fr;
+  gap:30px;
+  align-items:center;
+  padding:38px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.service-number{
+  color:var(--gold);
+  font-size:12px;
+  letter-spacing:2px;
+}
+
+.process{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+}
+
+.process-card{
+  background:#fff;
+  padding:35px 25px;
+}
+
+.process-card span{
+  color:var(--gold);
+  font-size:11px;
+}
+
+.process-card h3{
+  margin:28px 0 10px;
+}
+
+/* GALLERY */
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.gallery-item{
+  height:370px;
+  overflow:hidden;
+  cursor:pointer;
+}
+
+.gallery-item img{
+  height:100%;
+  object-fit:cover;
+  transition:.5s;
+}
+
+.gallery-item:hover img{
+  transform:scale(1.06);
+}
+
+/* LIGHTBOX */
+
+.lightbox{
+  position:fixed;
+  inset:0;
+  z-index:5000;
+  background:rgba(0,0,0,.94);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:30px;
+}
+
+.lightbox.show{
+  display:flex;
+}
+
+.lightbox img{
+  max-width:95%;
+  max-height:90vh;
+  width:auto;
+}
+
+/* CONTACT */
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:60px;
+}
+
+.contact-box{
+  background:var(--dark);
+  color:#fff;
+  padding:45px;
+}
+
+.contact-box h2{
+  font-size:40px;
+}
+
+.contact-detail{
+  margin-top:28px;
+}
+
+.contact-detail strong{
+  display:block;
+  margin-bottom:4px;
+}
+
+.contact-detail p{
+  color:#c3bdb6;
+}
+
+form{
+  background:#fff;
+  border:1px solid var(--line);
+  padding:40px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+.field{
+  margin-bottom:18px;
+}
+
+.full{
+  grid-column:1/-1;
+}
+
+label{
+  display:block;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-size:9px;
+  font-weight:700;
+  margin-bottom:8px;
+}
+
+input,
+textarea,
+select{
+  width:100%;
+  border:1px solid var(--line);
+  background:#faf9f7;
+  padding:14px;
+  outline:none;
+}
+
+textarea{
+  min-height:145px;
+  resize:vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+  border-color:var(--gold);
+}
+
+.form-status{
+  margin-top:15px;
+  font-size:12px;
+  color:var(--gold);
+}
+
+/* CUSTOMER CARE */
+
+.support-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.support-card{
+  background:#fff;
+  border:1px solid var(--line);
+  padding:35px;
+}
+
+.support-card p{
+  margin:15px 0 25px;
+}
+
+details{
+  border-bottom:1px solid var(--line);
+  padding:22px 0;
+}
+
+summary{
+  font-family:"Playfair Display",serif;
+  font-size:20px;
+  cursor:pointer;
+}
+
+/* REVIEWS */
+
+.reviews-section{
+  background:#fff;
+}
+
+.review-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:25px;
+  margin-bottom:45px;
+}
+
+.review-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.review-card{
+  border:1px solid var(--line);
+  background:#faf9f7;
+  padding:30px;
+}
+
+.stars{
+  color:var(--gold);
+  letter-spacing:3px;
+  font-size:16px;
+  margin-bottom:17px;
+}
+
+.review-text{
+  font-family:"Playfair Display",serif;
+  font-size:18px;
+  line-height:1.6;
+  color:var(--text);
+}
+
+.review-name{
+  margin-top:22px;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-weight:700;
+}
+
+.review-date{
+  font-size:10px;
+  color:var(--muted);
+  margin-top:5px;
+}
+
+.no-reviews{
+  grid-column:1/-1;
+  padding:50px;
+  text-align:center;
+  background:#faf9f7;
+  border:1px solid var(--line);
+  color:var(--muted);
+}
+
+.review-form-box{
+  margin-top:60px;
+  max-width:700px;
+  margin-left:auto;
+  margin-right:auto;
+  background:var(--cream);
+  padding:40px;
+  border:1px solid var(--line);
+}
+
+.review-form-box h3{
+  margin-bottom:8px;
+}
+
+.review-form-box>p{
+  margin-bottom:25px;
+}
+
+.rating{
+  display:flex;
+  flex-direction:row-reverse;
+  justify-content:flex-end;
+  gap:4px;
+  margin:8px 0 22px;
+}
+
+.rating input{
+  display:none;
+}
+
+.rating label{
+  width:auto;
+  font-size:30px;
+  color:#ccc;
+  cursor:pointer;
+  margin:0;
+}
+
+.rating label:hover,
+.rating label:hover~label,
+.rating input:checked~label{
+  color:var(--gold);
+}
+
+/* ADMIN */
+
+.admin-section{
+  min-height:calc(100vh - 78px);
+  padding:70px 0;
+}
+
+.admin-login{
+  width:min(450px,100%);
+  margin:auto;
+  background:#fff;
+  padding:40px;
+  border:1px solid var(--line);
+}
+
+.admin-login h2{
+  font-size:40px;
+  margin-bottom:8px;
+}
+
+.admin-login p{
+  margin-bottom:28px;
+}
+
+.admin-dashboard{
+  display:none;
+}
+
+.admin-dashboard.visible{
+  display:block;
+}
+
+.admin-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:35px;
+  gap:20px;
+}
+
+.admin-stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  margin-bottom:40px;
+}
+
+.admin-stat{
+  background:#fff;
+  border:1px solid var(--line);
+  padding:30px;
+}
+
+.admin-stat span{
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:var(--muted);
+}
+
+.admin-stat strong{
+  display:block;
+  font-family:"Playfair Display",serif;
+  font-size:42px;
+  margin-top:8px;
+}
+
+.admin-table{
+  overflow:auto;
+  background:#fff;
+  border:1px solid var(--line);
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:750px;
+}
+
+th,td{
+  padding:15px;
+  text-align:left;
+  border-bottom:1px solid var(--line);
+  font-size:12px;
+}
+
+th{
+  background:#f6f2ed;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-size:9px;
+}
+
+.approve{
+  background:var(--success);
+  color:#fff;
+  border:0;
+  padding:7px 10px;
+  font-size:9px;
+  text-transform:uppercase;
+}
+
+.reject{
+  background:var(--danger);
+  color:#fff;
+  border:0;
+  padding:7px 10px;
+  font-size:9px;
+  text-transform:uppercase;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  z-index:2500;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#25D366;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:26px;
+  box-shadow:0 8px 25px rgba(0,0,0,.22);
+  transition:.25s;
+}
+
+.whatsapp:hover{
+  transform:scale(1.08);
+}
+
+/* FOOTER */
+
+footer{
+  background:var(--black);
+  color:#fff;
+  padding:65px 0 25px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:50px;
+  padding-bottom:45px;
+}
+
+footer h3{
+  font-size:28px;
+}
+
+footer p{
+  color:#aaa39c;
+  margin-top:15px;
+  max-width:430px;
+}
+
+.footer-links{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.footer-links button{
+  border:0;
+  background:none;
+  color:#aaa39c;
+  text-align:left;
+  font-size:12px;
+}
+
+.footer-links button:hover{
+  color:#fff;
+}
+
+.copyright{
+  border-top:1px solid #302d2a;
+  padding-top:22px;
+  font-size:11px;
+  color:#716c67;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+  header{
+    height:70px;
+  }
+
+  .menu{
+    display:block;
+  }
+
+  nav{
+    display:none;
+    position:absolute;
+    top:70px;
+    left:0;
+    right:0;
+    background:#fff;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    padding:10px 5%;
+    border-bottom:1px solid var(--line);
+  }
+
+  nav.open{
+    display:flex;
+  }
+
+  nav button{
+    text-align:left;
+    padding:15px 0;
+    border-bottom:1px solid #eee;
+  }
+
+  .hero{
+    min-height:calc(100vh - 70px);
+  }
+
+  .section{
+    padding:70px 0;
+  }
+
+  .two-column,
+  .dark-banner,
+  .contact-grid{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+
+  .products-grid,
+  .review-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .values,
+  .process,
+  .support-grid,
+  .admin-stats{
+    grid-template-columns:1fr;
+  }
+
+  .service{
+    grid-template-columns:55px 1fr;
+  }
+
+  .service p{
+    grid-column:2;
+  }
+
+  .gallery{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+  .review-top{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+}
+
+@media(max-width:550px){
+
+  h1{
+    font-size:47px;
+  }
+
+  .products-grid,
+  .review-grid,
+  .gallery,
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .photo img{
+    height:400px;
+  }
+
+  .dark-banner{
+    padding:60px 6%;
+  }
+
+  .dark-banner img{
+    height:350px;
+  }
+
+  form,
+  .review-form-box,
+  .admin-login{
+    padding:28px;
+  }
+
+  .whatsapp{
+    width:52px;
+    height:52px;
+    right:16px;
+    bottom:16px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<button class="logo" onclick="showPage('home')">
+  AY Décor & Furniture
+  <small>WHERE COMFORT MEETS ELEGANCE</small>
+</button>
+
+<button class="menu" onclick="toggleMenu()">☰</button>
+
+<nav id="nav">
+
+<button data-page="home" onclick="showPage('home')">Home</button>
+<button data-page="about" onclick="showPage('about')">About</button>
+<button data-page="products" onclick="showPage('products')">Products</button>
+<button data-page="services" onclick="showPage('services')">Services</button>
+<button data-page="gallery" onclick="showPage('gallery')">Gallery</button>
+<button data-page="reviews" onclick="showPage('reviews')">Reviews</button>
+<button data-page="contact" onclick="showPage('contact')">Contact</button>
+<button data-page="support" onclick="showPage('support')">Customer Care</button>
+
+</nav>
+
+</header>
+
+
+<!-- ================= HOME ================= -->
+
+<main id="home" class="page active">
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="section-label">AY Décor & Furniture</div>
+
+<h1>Spaces designed to feel like home.</h1>
+
+<p>
+Luxury furniture, interior styling and custom spaces
+created with intention, comfort and timeless elegance.
+</p>
+
+<div class="buttons">
+
+<button class="btn" onclick="showPage('products')">
+Shop Furniture
+</button>
+
+<button class="btn btn-outline" onclick="showPage('contact')">
+Contact Us
+</button>
+
+<button class="btn btn-outline" onclick="openWhatsApp('general')">
+Chat on WhatsApp
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container two-column">
+
+<div>
+
+<div class="section-label">Our Philosophy</div>
+
+<h2>Beautiful spaces should feel personal.</h2>
+
+<p>
+At AY Décor & Furniture, we believe your space should
+tell your story. From statement furniture to complete
+interiors, we create environments that combine comfort,
+functionality and sophisticated design.
+</p>
+
+<button class="btn" onclick="showPage('about')">
+Discover AY
+</button>
+
+</div>
+
+<div class="photo">
+
+<img
+src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1300&q=90"
+alt="Luxury AY interior"
+>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section" style="background:#fff;">
+
+<div class="container">
+
+<div class="products-header">
+
+<div>
+<div class="section-label">The Collection</div>
+<h2>Selected pieces.</h2>
+</div>
+
+<button class="btn btn-outline" onclick="showPage('products')">
+View All
+</button>
+
+</div>
+
+
+<div class="products-grid">
+
+<article class="product">
+
+<div class="product-img">
+<img
+src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1100&q=90"
+alt="Cloud Bouclé Sofa"
+>
+</div>
+
+<div class="product-info">
+<h3>Cloud Bouclé Sofa</h3>
+<div class="price">Contact for price</div>
+<p>Soft curves and deep comfort.</p>
+<button class="product-link"
+onclick="requestProduct('Cloud Bouclé Sofa')">
+Enquire →
+</button>
+</div>
+
+</article>
+
+
+<article class="product">
+
+<div class="product-img">
+<img
+src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=1100&q=90"
+alt="Bouclé Accent Chair"
+>
+</div>
+
+<div class="product-info">
+<h3>Bouclé Accent Chair</h3>
+<div class="price">Contact for price</div>
+<p>A refined statement piece.</p>
+<button class="product-link"
+onclick="requestProduct('Bouclé Accent Chair')">
+Enquire →
+</button>
+</div>
+
+</article>
+
+
+<article class="product">
+
+<div class="product-img">
+<img
+src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=1100&q=90"
+alt="Modern Sectional"
+>
+</div>
+
+<div class="product-info">
+<h3>Modern Sectional</h3>
+<div class="price">Contact for price</div>
+<p>Generous seating for everyday life.</p>
+<button class="product-link"
+onclick="requestProduct('Modern Sectional')">
+Enquire →
+</button>
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="dark-banner">
+
+<div>
+
+<div class="section-label">Custom Interiors</div>
+
+<h2>We don't just furnish rooms. We transform them.</h2>
+
+<p>
+Tell us what you have in mind and our team will help
+you turn your space into something truly yours.
+</p>
+
+<button class="btn" onclick="showPage('services')">
+Our Services
+</button>
+
+</div>
+
+<img
+src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1300&q=90"
+alt="Luxury custom interior"
+>
+
+</section>
+
+</main>
+
+
+<!-- ================= ABOUT ================= -->
+
+<main id="about" class="page">
+
+<section class="page-hero">
+
+<div class="container">
+
+<div class="section-label">Our Story</div>
+
+<h1>Designed with intention.<br>Made for living.</h1>
+
+<p>
+A modern furniture and interior studio creating refined,
+comfortable spaces for contemporary living.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container two-column">
+
+<div>
+
+<div class="section-label">Who We Are</div>
+
+<h2>A modern furniture & interior studio.</h2>
+
+<p>
+AY Décor & Furniture was created for people who appreciate
+beautiful things but also understand that a home needs
+to feel comfortable and functional.
+</p>
+
+<p>
+Our approach combines thoughtful design, quality materials
+and personal service to create interiors that feel timeless.
+</p>
+
+<p>
+From carefully selected furniture pieces to custom designs
+and complete interior transformations, our goal is simple:
+to make your space feel like you.
+</p>
+
+</div>
+
+<div class="photo">
+
+<img
+src="https://images.unsplash.com/photo-1615529162924-f8605388461d?auto=format&fit=crop&w=1300&q=90"
+alt="AY Décor elegant interior"
+>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section" style="background:#fff;">
+
+<div class="container">
+
+<div class="section-label">What Matters To Us</div>
+
+<h2 style="margin-bottom:40px;">Our values.</h2>
+
+<div class="values">
+
+<div class="value">
+<div class="value-number">01</div>
+<h3>Quality</h3>
+<p>
+We care about materials, finishing and the details
+that make furniture worth keeping.
+</p>
+</div>
+
+<div class="value">
+<div class="value-number">02</div>
+<h3>Personal</h3>
+<p>
+Every project starts by understanding the person
+behind the space.
+</p>
+</div>
+
+<div class="value">
+<div class="value-number">03</div>
+<h3>Craft</h3>
+<p>
+Thoughtful design and skilled craftsmanship create
+spaces that feel special.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<main id="products" class="page">
+
+<section class="page-hero">
+
+<div class="container">
+
+<div class="section-label">The Collection</div>
+
+<h1>Furniture that<br>makes the room.</h1>
+
+<p>
+Explore selected pieces and enquire about custom
+specifications, colours and finishes.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<div class="filters">
+
+<button class="filter active" data-filter="all">All</button>
+<button class="filter" data-filter="living">Living Room</button>
+<button class="filter" data-filter="bedroom">Bedroom</button>
+<button class="filter" data-filter="accent">Accent</button>
+<button class="filter" data-filter="custom">Custom</button>
+
+</div>
+
+
+<div class="products-grid">
+
+
+<article class="product" data-category="living">
+
+<div class="product-img">
+<img
+src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1100&q=90"
+alt="Cloud Bouclé Sofa"
+>
+</div>
+
+<div class="product-info">
+<h3>Cloud Bouclé Sofa</h3>
+<div class="price">Contact for price</div>
+<p>Soft curves and deep comfort.</p>
+<button class="product-link"
+onclick="requestProduct('Cloud Bouclé Sofa')">
+Enquire →
+</button>
+</div>
+
+</article>
+
+
+<article class="product" data-category="accent">
+
+<div class="product-img">
+<img
+src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=1100&q=90"
+alt="Bouclé Accent Chair"
+>
+</div>
+
+<div class="product-info">
+<h3>Bouclé Accent Chair</h3>
+<div class="price">Contact for price</div>
+<p>A refined statement piece.</p>
+<button class="product-link"
+onclick="requestProduct('Bouclé Accent Chair')">
+Enquire →
+</button>
+</div>
+
+</article>
+
+
+<article class="product" data-category="accent">
+
+<div class="product-img">
+<img
+src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=1100&q=90"
+alt="Patterned Chair and Ottoman"
+>
+</div>
+
+<div class="product-info">
+<h3>Patterned Chair & Ottoman</h3>
+<div class="price">Contact for price</div>
+<p>A bold pair for quiet corners.</p>
+<button class="product-link"
+onclick="requestProduct('Patterned Chair & Ottoman')">
+Enquire →
+</button>
+</div>
+
+</article>
+
+
+<article class="product" data-category="custom">
+
+<div class="product-img">
+<img
+src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=90"
+alt="TV Wall Unit"
+>
+</div>
+
+<div class="product-info">
+<h3>TV Wall Unit</h3>
+<div class="price">Contact for price</div>
+<p>Built-in storage with tailored finishes.</p>
+<button class="product-link"
+onclick="requestProduct('TV Wall Unit')">
+Enquire →
+</button>
+</div>
+
+</article>
+
+
+<article class="product" data-category="custom">
+
+<div class="product-img">
+<img
+src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=1100&q=90"
+alt="Custom Shelving"
+>
+</div>
+
+<div class="product-info">
+<h3>Custom Shelving</h3>
+<div class="price">Contact for price</div>
+<p>Designed around your collection.</p>
+<button class="product-link"
+onclick="requestProduct('Custom Shelving')">
+Enquire →
+</button>
+</div>
+
+</article>
+
+
+<article class="product" data-category="living">
+
+<div class="product-img">
+<img
+src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=1100&q=90"
+alt="Modern Sectional"
+>
+</div>
+
+<div class="product-info">
+<h3>Modern Sectional</h3>
+<div class="price">Contact for price</div>
+<p>Generous seating for everyday life.</p>
+<button class="product-link"
+onclick="requestProduct('Modern Sectional')">
+Enquire →
+</button>
+</div>
+
+</article>
+
+
+<article class="product" data-category="bedroom">
+
+<div class="product-img">
+<img
+src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1100&q=90"
+alt="Upholstered Bed"
+>
+</div>
+
+<div class="product-info">
+<h3>Upholstered Bed</h3>
+<div class="price">Contact for price</div>
+<p>Tailored headboard and premium fabric.</p>
+<button class="product-link"
+onclick="requestProduct('Upholstered Bed')">
+Enquire →
+</button>
+</div>
+
+</article>
+
+
+<article class="product" data-category="living">
+
+<div class="product-img">
+<img
+src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1100&q=90"
+alt="Luxury living room chair"
+>
+</div>
+
+<div class="product-info">
+<h3>Luxury Lounge Chair</h3>
+<div class="price">Contact for price</div>
+<p>Comfort with a sophisticated silhouette.</p>
+<button class="product-link"
+onclick="requestProduct('Luxury Lounge Chair')">
+Enquire →
+</button>
+</div>
+
+</article>
+
+
+<article class="product" data-category="bedroom">
+
+<div class="product-img">
+<img
+src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1100&q=90"
+alt="Luxury bedroom"
+>
+</div>
+
+<div class="product-info">
+<h3>Contemporary Bedroom Set</h3>
+<div class="price">Contact for price</div>
+<p>Elegant pieces designed to work together.</p>
+<button class="product-link"
+onclick="requestProduct('Contemporary Bedroom Set')">
+Enquire →
+</button>
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- ================= SERVICES ================= -->
+
+<main id="services" class="page">
+
+<section class="page-hero">
+
+<div class="container">
+
+<div class="section-label">What We Do</div>
+
+<h1>From one piece<br>to the whole room.</h1>
+
+<p>
+Flexible interior and furniture services designed around
+your needs, style and space.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<div class="service-list">
+
+<div class="service">
+<div class="service-number">01</div>
+<h2>Interior Design</h2>
+<p>
+Complete design direction for residential spaces,
+from concept and colour palette to furniture selection
+and final styling.
+</p>
+</div>
+
+<div class="service">
+<div class="service-number">02</div>
+<h2>Custom Furniture</h2>
+<p>
+Furniture designed around your exact dimensions,
+preferred materials, colours and lifestyle.
+</p>
+</div>
+
+<div class="service">
+<div class="service-number">03</div>
+<h2>Interior Styling</h2>
+<p>
+The finishing layer that brings a room together:
+furniture placement, accessories, textures and details.
+</p>
+</div>
+
+<div class="service">
+<div class="service-number">04</div>
+<h2>Space Makeovers</h2>
+<p>
+Give an existing space a completely new personality
+without losing what already works.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section" style="background:#fff;">
+
+<div class="container">
+
+<div class="section-label">The Process</div>
+
+<h2 style="margin-bottom:40px;">
+Simple. Personal. Intentional.
+</h2>
+
+<div class="process">
+
+<div class="process-card">
+<span>01</span>
+<h3>Tell us</h3>
+<p>Share your ideas, needs, budget and inspiration.</p>
+</div>
+
+<div class="process-card">
+<span>02</span>
+<h3>We plan</h3>
+<p>We develop the direction, selections and details.</p>
+</div>
+
+<div class="process-card">
+<span>03</span>
+<h3>We create</h3>
+<p>Our team brings the design to life.</p>
+</div>
+
+<div class="process-card">
+<span>04</span>
+<h3>You enjoy</h3>
+<p>You step into a space that feels completely yours.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- ================= GALLERY ================= -->
+
+<main id="gallery" class="page">
+
+<section class="page-hero">
+
+<div class="container">
+
+<div class="section-label">Our Work</div>
+
+<h1>A glimpse of<br>the AY aesthetic.</h1>
+
+<p>
+Explore spaces, furniture and details inspired by
+modern luxury and everyday comfort.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<div class="gallery">
+
+<div class="gallery-item">
+<img
+src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1300&q=90"
+alt="Luxury living room"
+onclick="openLightbox(this.src,this.alt)"
+>
+</div>
+
+<div class="gallery-item">
+<img
+src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1300&q=90"
+alt="Modern interior"
+onclick="openLightbox(this.src,this.alt)"
+>
+</div>
+
+<div class="gallery-item">
+<img
+src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1300&q=90"
+alt="Designer living space"
+onclick="openLightbox(this.src,this.alt)"
+>
+</div>
+
+<div class="gallery-item">
+<img
+src="https://images.unsplash.com/photo-1615529162924-f8605388461d?auto=format&fit=crop&w=1300&q=90"
+alt="Luxury furniture"
+onclick="openLightbox(this.src,this.alt)"
+>
+</div>
+
+<div class="gallery-item">
+<img
+src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1300&q=90"
+alt="Contemporary interior"
+onclick="openLightbox(this.src,this.alt)"
+>
+</div>
+
+<div class="gallery-item">
+<img
+src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1300&q=90"
+alt="Elegant designer room"
+onclick="openLightbox(this.src,this.alt)"
+>
+</div>
+
+<div class="gallery-item">
+<img
+src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1300&q=90"
+alt="Modern home interior"
+onclick="openLightbox(this.src,this.alt)"
+>
+</div>
+
+<div class="gallery-item">
+<img
+src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1300&q=90"
+alt="Luxury room"
+onclick="openLightbox(this.src,this.alt)"
+>
+</div>
+
+<div class="gallery-item">
+<img
+src="https://images.unsplash.com/photo-1600210491369-e753d80a41f3?auto=format&fit=crop&w=1300&q=90"
+alt="Elegant furniture"
+onclick="openLightbox(this.src,this.alt)"
+>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- ================= REVIEWS ================= -->
+
+<main id="reviews" class="page">
+
+<section class="page-hero">
+
+<div class="container">
+
+<div class="section-label">Client Reviews</div>
+
+<h1>Your experience<br>matters to us.</h1>
+
+<p>
+If you've experienced AY Décor & Furniture, we'd love
+to hear what you think.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section reviews-section">
+
+<div class="container">
+
+<div class="review-top">
+
+<div>
+<div class="section-label">What Our Clients Say</div>
+<h2>Real experiences.</h2>
+</div>
+
+<button class="btn" onclick="document.getElementById('reviewFormBox').scrollIntoView({behavior:'smooth'})">
+Leave a Review
+</button>
+
+</div>
+
+
+<div id="reviewGrid" class="review-grid">
+
+<div class="no-reviews">
+Loading reviews...
+</div>
+
+</div>
+
+
+<div class="review-form-box" id="reviewFormBox">
+
+<div class="section-label">Share Your Experience</div>
+
+<h3>Loved your AY experience?</h3>
+
+<p>
+Tell us what you think. Your feedback helps us create
+even better spaces.
+</p>
+
+
+<form id="reviewForm">
+
+<div class="field">
+
+<label>Your Name</label>
+
+<input
+type="text"
+name="review_name"
+required
+placeholder="Your name"
+>
+
+</div>
+
+
+<div class="field">
+
+<label>Your Rating</label>
+
+<div class="rating">
+
+<input type="radio" id="star5" name="rating" value="5" required>
+<label for="star5">★</label>
+
+<input type="radio" id="star4" name="rating" value="4">
+<label for="star4">★</label>
+
+<input type="radio" id="star3" name="rating" value="3">
+<label for="star3">★</label>
+
+<input type="radio" id="star2" name="rating" value="2">
+<label for="star2">★</label>
+
+<input type="radio" id="star1" name="rating" value="1">
+<label for="star1">★</label>
+
+</div>
+
+</div>
+
+
+<div class="field">
+
+<label>Your Review</label>
+
+<textarea
+name="review_text"
+required
+placeholder="Tell us about your experience..."
+></textarea>
+
+</div>
+
+
+<button class="btn" type="submit">
+Submit Review
+</button>
+
+<div id="reviewStatus" class="form-status"></div>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- ================= CONTACT ================= -->
+
+<main id="contact" class="page">
+
+<section class="page-hero">
+
+<div class="container">
+
+<div class="section-label">Let's Talk</div>
+
+<h1>Start your next<br>beautiful space.</h1>
+
+<p>
+Tell us what you are looking for and we'll take it from there.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container contact-grid">
+
+<div class="contact-box">
+
+<div class="section-label">Contact AY</div>
+
+<h2>Let's create something beautiful.</h2>
+
+
+<div class="contact-detail">
+<strong>Location</strong>
+<p>Abuja, Nigeria</p>
+</div>
+
+
+<div class="contact-detail">
+<strong>Phone</strong>
+<p>0814 329 7963</p>
+</div>
+
+
+<div class="contact-detail">
+<strong>WhatsApp</strong>
+<p>+234 705 557 1252</p>
+</div>
+
+
+<div class="contact-detail">
+<strong>Delivery</strong>
+<p>Nationwide delivery available.</p>
+</div>
+
+
+<div class="contact-detail">
+<strong>Business Hours</strong>
+<p>Open 24/7</p>
+</div>
+
+</div>
+
+
+<form id="contactForm">
+
+<div class="form-grid">
+
+<div class="field">
+<label>Name</label>
+<input
+type="text"
+name="name"
+required
+placeholder="Your name"
+>
+</div>
+
+
+<div class="field">
+<label>Phone</label>
+<input
+type="tel"
+name="phone"
+required
+placeholder="0814..."
+>
+</div>
+
+
+<div class="field full">
+
+<label>What can we help with?</label>
+
+<select name="service">
+
+<option>Product enquiry</option>
+<option>Custom furniture</option>
+<option>Interior design</option>
+<option>Interior styling</option>
+<option>Space makeover</option>
+<option>Consultation</option>
+<option>Existing order</option>
+
+</select>
+
+</div>
+
+
+<div class="field full">
+
+<label>Message</label>
+
+<textarea
+name="message"
+required
+placeholder="Tell us about your project..."
+></textarea>
+
+</div>
+
+</div>
+
+
+<button class="btn" type="submit">
+Send to WhatsApp
+</button>
+
+<div id="formStatus" class="form-status"></div>
+
+</form>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- ================= CUSTOMER CARE ================= -->
+
+<main id="support" class="page">
+
+<section class="page-hero">
+
+<div class="container">
+
+<div class="section-label">Customer Care</div>
+
+<h1>We're here<br>to help.</h1>
+
+<p>
+Have a question about a product, order or custom project?
+Our customer-care team is available 24/7.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<div class="support-grid">
+
+<div class="support-card">
+
+<div class="section-label">01</div>
+
+<h3>Product Enquiry</h3>
+
+<p>
+Questions about availability, dimensions, fabrics,
+colours or pricing?
+</p>
+
+<button class="btn"
+onclick="requestProduct('General product enquiry')">
+Contact Us
+</button>
+
+</div>
+
+
+<div class="support-card">
+
+<div class="section-label">02</div>
+
+<h3>Existing Order</h3>
+
+<p>
+Need an update about your order or delivery?
+Speak with our team.
+</p>
+
+<button class="btn"
+onclick="openWhatsApp('order')">
+Get Help
+</button>
+
+</div>
+
+
+<div class="support-card">
+
+<div class="section-label">03</div>
+
+<h3>Custom Project</h3>
+
+<p>
+Speak with us about custom furniture or a complete
+interior project.
+</p>
+
+<button class="btn"
+onclick="openWhatsApp('custom')">
+Start Project
+</button>
+
+</div>
+
+</div>
+
+
+<div style="margin-top:70px;">
+
+<div class="section-label">Frequently Asked Questions</div>
+
+
+<details>
+<summary>Can I request a custom size?</summary>
+<p>
+Yes. Many furniture pieces can be made to suit
+specific dimensions.
+</p>
+</details>
+
+
+<details>
+<summary>Can I choose the fabric?</summary>
+<p>
+Fabric, colour and finishing options can be discussed
+depending on the piece and availability.
+</p>
+</details>
+
+
+<details>
+<summary>Do you deliver outside Abuja?</summary>
+<p>
+Yes. AY Décor & Furniture offers nationwide delivery.
+</p>
+</details>
+
+
+<details>
+<summary>How do I pay?</summary>
+<p>
+For now, enquiries and payment arrangements are handled
+directly through WhatsApp.
+</p>
+</details>
+
+
+<details>
+<summary>Are you open on weekends?</summary>
+<p>
+Yes. Our customer-care service is available 24/7.
+</p>
+</details>
+
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- ================= ADMIN ================= -->
+
+<main id="admin" class="page">
+
+<section class="admin-section">
+
+<div class="container">
+
+
+<div id="adminLoginBox" class="admin-login">
+
+<div class="section-label">Private Portal</div>
+
+<h2>Admin Login</h2>
+
+<p>
+Manage customer reviews and website content.
+</p>
+
+
+<form id="adminLoginForm">
+
+<div class="field">
+
+<label>Email</label>
+
+<input
+type="email"
+id="adminEmail"
+required
+placeholder="Admin email"
+>
+
+</div>
+
+
+<div class="field">
+
+<label>Password</label>
+
+<input
+type="password"
+id="adminPassword"
+required
+placeholder="Password"
+>
+
+</div>
+
+
+<button class="btn" type="submit">
+Sign In
+</button>
+
+<div id="adminLoginStatus" class="form-status"></div>
+
+</form>
+
+</div>
+
+
+<div id="adminDashboard" class="admin-dashboard">
+
+<div class="admin-head">
+
+<div>
+
+<div class="section-label">AY Administration</div>
+
+<h2>Dashboard</h2>
+
+</div>
+
+<button class="btn btn-dark" onclick="adminLogout()">
+Sign Out
+</button>
+
+</div>
+
+
+<div class="admin-stats">
+
+<div class="admin-stat">
+<span>Total Reviews</span>
+<strong id="totalReviews">0</strong>
+</div>
+
+<div class="admin-stat">
+<span>Pending Reviews</span>
+<strong id="pendingReviews">0</strong>
+</div>
+
+<div class="admin-stat">
+<span>Approved Reviews</span>
+<strong id="approvedReviews">0</strong>
+</div>
+
+</div>
+
+
+<h3 style="margin-bottom:18px;">
+Review Management
+</h3>
+
+
+<div class="admin-table">
+
+<table>
+
+<thead>
+
+<tr>
+<th>Customer</th>
+<th>Rating</th>
+<th>Review</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+
+</thead>
+
+<tbody id="adminReviewTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- ================= LIGHTBOX ================= -->
+
+<div
+class="lightbox"
+id="lightbox"
+onclick="closeLightbox()"
+>
+
+<img id="lightboxImg" alt="">
+
+</div>
+
+
+<!-- ================= WHATSAPP ================= -->
+
+<a
+class="whatsapp"
+href="https://wa.me/2347055571252?text=Hello%20AY%20Décor%20%26%20Furniture%2C%20I%E2%80%99m%20from%20your%20website."
+target="_blank"
+aria-label="Chat with AY Décor & Furniture on WhatsApp"
+>
+✆
+</a>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<h3>AY Décor & Furniture</h3>
+
+<p>
+Where Comfort Meets Elegance.
+Furniture and interiors created for beautiful living.
+</p>
+
+<p>
+Abuja, Nigeria · Nationwide Delivery · Open 24/7
+</p>
+
+</div>
+
+
+<div>
+
+<div class="section-label">Explore</div>
+
+<div class="footer-links">
+
+<button onclick="showPage('home')">Home</button>
+<button onclick="showPage('about')">About</button>
+<button onclick="showPage('products')">Products</button>
+<button onclick="showPage('services')">Services</button>
+<button onclick="showPage('gallery')">Gallery</button>
+<button onclick="showPage('reviews')">Reviews</button>
+
+</div>
+
+</div>
+
+
+<div>
+
+<div class="section-label">Connect</div>
+
+<div class="footer-links">
+
+<button onclick="showPage('contact')">Contact Us</button>
+<button onclick="showPage('support')">Customer Care</button>
+<button onclick="openWhatsApp('general')">WhatsApp</button>
+
+<button onclick="window.open('https://www.tiktok.com/@ayo.best.furniture','_blank')">
+TikTok
+</button>
+
+<button onclick="showPage('admin')">
+Admin Portal
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="copyright">
+
+© <span id="year"></span> AY Décor & Furniture.
+All rights reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+
+<script>
+
+/* =====================================================
+   AY DÉCOR & FURNITURE
+   ONE-FILE WEBSITE
+===================================================== */
+
+
+/* =====================================================
+   SUPABASE SETTINGS
+=====================================================
+
+   CREATE YOUR SUPABASE PROJECT AND REPLACE THESE.
+
+===================================================== */
+
+const SUPABASE_URL =
+"YOUR_SUPABASE_PROJECT_URL";
+
+const SUPABASE_ANON_KEY =
+"YOUR_SUPABASE_ANON_KEY";
+
+
+/* =====================================================
+   LOAD SUPABASE
+===================================================== */
+
+let sb = null;
+
+if(
+  !SUPABASE_URL.includes("YOUR_") &&
+  !SUPABASE_ANON_KEY.includes("YOUR_")
+){
+
+  const supabaseScript =
+  document.createElement("script");
+
+  supabaseScript.src =
+  "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2";
+
+  supabaseScript.onload = function(){
+
+    sb =
+    window.supabase.createClient(
+      SUPABASE_URL,
+      SUPABASE_ANON_KEY
+    );
+
+    loadReviews();
+
+  };
+
+  document.head.appendChild(
+    supabaseScript
+  );
+
+}else{
+
+  loadDemoReviews();
+
+}
+
+
+/* =====================================================
+   PAGE NAVIGATION
+===================================================== */
+
+function showPage(page){
+
+  document
+  .querySelectorAll(".page")
+  .forEach(item=>{
+    item.classList.remove("active");
+  });
+
+
+  const target =
+  document.getElementById(page);
+
+
+  if(target){
+
+    target.classList.add("active");
+
+  }
+
+
+  document
+  .querySelectorAll("nav button[data-page]")
+  .forEach(button=>{
+
+    button.classList.toggle(
+      "active",
+      button.dataset.page===page
+    );
+
+  });
+
+
+  document
+  .getElementById("nav")
+  .classList.remove("open");
+
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+
+  history.pushState(
+    {page:page},
+    "",
+    "#"+page
+  );
+
+
+  if(page==="reviews"){
+    loadReviews();
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+function toggleMenu(){
+
+  document
+  .getElementById("nav")
+  .classList.toggle("open");
+
+}
+
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
+
+const WHATSAPP =
+"2347055571252";
+
+
+function openWhatsApp(type="general"){
+
+  let message =
+  "Hello AY Décor & Furniture, I’m from your website.";
+
+
+  if(type==="general"){
+
+    message +=
+    "\n\nI would like to make an enquiry.";
+
+  }
+
+
+  if(type==="order"){
+
+    message +=
+    "\n\nI need help with an existing order.";
+
+  }
+
+
+  if(type==="custom"){
+
+    message +=
+    "\n\nI’m interested in a custom furniture/interior project.";
+
+  }
+
+
+  window.open(
+    "https://wa.me/"+WHATSAPP+
+    "?text="+
+    encodeURIComponent(message),
+    "_blank"
+  );
+
+}
+
+
+/* =====================================================
+   PRODUCT ENQUIRY
+===================================================== */
+
+function requestProduct(product){
+
+  showPage("contact");
+
+
+  setTimeout(()=>{
+
+    const service =
+    document.querySelector(
+      'select[name="service"]'
+    );
+
+
+    const message =
+    document.querySelector(
+      'textarea[name="message"]'
+    );
+
+
+    if(service){
+      service.value="Product enquiry";
+    }
+
+
+    if(message){
+
+      message.value =
+      "Hello AY Décor & Furniture, I’m from your website."+
+      "\n\nI’m interested in: "+
+      product+
+      "."+
+      "\n\nPlease send me more information.";
+
+    }
+
+  },100);
+
+}
+
+
+/* =====================================================
+   CONTACT FORM → WHATSAPP
+===================================================== */
+
+document
+.getElementById("contactForm")
+.addEventListener("submit",function(e){
+
+  e.preventDefault();
+
+
+  const data =
+  new FormData(this);
+
+
+  const name =
+  data.get("name");
+
+
+  const phone =
+  data.get("phone");
+
+
+  const service =
+  data.get("service");
+
+
+  const message =
+  data.get("message");
+
+
+  const whatsappMessage =
+`Hello AY Décor & Furniture, I’m from your website.
+
+Name: ${name}
+
+Phone: ${phone}
+
+Service: ${service}
+
+Message:
+${message}`;
+
+
+  document
+  .getElementById("formStatus")
+  .textContent =
+  "Opening WhatsApp...";
+
+
+  window.open(
+    "https://wa.me/"+WHATSAPP+
+    "?text="+
+    encodeURIComponent(whatsappMessage),
+    "_blank"
+  );
+
+});
+
+
+/* =====================================================
+   PRODUCT FILTER
+===================================================== */
+
+document
+.querySelectorAll(".filter")
+.forEach(button=>{
+
+  button.addEventListener(
+    "click",
+    function(){
+
+      document
+      .querySelectorAll(".filter")
+      .forEach(x=>
+        x.classList.remove("active")
+      );
+
+
+      this.classList.add("active");
+
+
+      const category =
+      this.dataset.filter;
+
+
+      document
+      .querySelectorAll(
+        ".product[data-category]"
+      )
+      .forEach(card=>{
+
+        if(
+          category==="all" ||
+          card.dataset.category===category
+        ){
+
+          card.style.display="";
+
+        }else{
+
+          card.style.display="none";
+
+        }
+
+      });
+
+    }
+  );
+
+});
+
+
+/* =====================================================
+   LIGHTBOX
+===================================================== */
+
+function openLightbox(src,alt){
+
+  document
+  .getElementById("lightboxImg")
+  .src=src;
+
+
+  document
+  .getElementById("lightboxImg")
+  .alt=alt;
+
+
+  document
+  .getElementById("lightbox")
+  .classList.add("show");
+
+}
+
+
+function closeLightbox(){
+
+  document
+  .getElementById("lightbox")
+  .classList.remove("show");
+
+}
+
+
+document.addEventListener(
+"keydown",
+function(e){
+
+  if(e.key==="Escape"){
+    closeLightbox();
+  }
+
+});
+
+
+/* =====================================================
+   REVIEW SUBMISSION
+===================================================== */
+
+document
+.getElementById("reviewForm")
+.addEventListener(
+"submit",
+async function(e){
+
+  e.preventDefault();
+
+
+  const status =
+  document.getElementById(
+    "reviewStatus"
+  );
+
+
+  const formData =
+  new FormData(this);
+
+
+  const name =
+  formData.get("review_name");
+
+
+  const rating =
+  Number(formData.get("rating"));
+
+
+  const review =
+  formData.get("review_text");
+
+
+  if(!rating){
+
+    status.textContent =
+    "Please select a star rating.";
+
+    return;
+
+  }
+
+
+  /* REAL SUPABASE DATABASE */
+
+  if(sb){
+
+    status.textContent =
+    "Submitting your review...";
+
+
+    const {error} =
+    await sb
+    .from("reviews")
+    .insert({
+
+      customer_name:name,
+
+      rating:rating,
+
+      review_text:review,
+
+      approved:false
+
+    });
+
+
+    if(error){
+
+      status.textContent =
+      "Unable to submit review right now. Please try again.";
+
+      console.error(error);
+
+      return;
+
+    }
+
+
+    this.reset();
+
+
+    status.textContent =
+    "Thank you! Your review has been submitted and is awaiting approval.";
+
+    return;
+
+  }
+
+
+  /* DEMO MODE */
+
+  const reviews =
+  JSON.parse(
+    localStorage.getItem(
+      "ay_reviews"
+    ) || "[]"
+  );
+
+
+  reviews.push({
+
+    id:Date.now(),
+
+    customer_name:name,
+
+    rating:rating,
+
+    review_text:review,
+
+    approved:true,
+
+    created_at:new Date().toISOString()
+
+  });
+
+
+  localStorage.setItem(
+    "ay_reviews",
+    JSON.stringify(reviews)
+  );
+
+
+  this.reset();
+
+
+  status.textContent =
+  "Thank you! Your review has been added.";
+
+
+  loadDemoReviews();
+
+});
+
+
+/* =====================================================
+   LOAD REAL REVIEWS
+===================================================== */
+
+async function loadReviews(){
+
+  if(!sb){
+
+    loadDemoReviews();
+
+    return;
+
+  }
+
+
+  const grid =
+  document.getElementById(
+    "reviewGrid"
+  );
+
+
+  if(!grid)return;
+
+
+  grid.innerHTML =
+  '<div class="no-reviews">Loading reviews...</div>';
+
+
+  const {data,error} =
+  await sb
+  .from("reviews")
+  .select("*")
+  .eq("approved",true)
+  .order(
+    "created_at",
+    {ascending:false}
+  );
+
+
+  if(error){
+
+    grid.innerHTML =
+    '<div class="no-reviews">Reviews are temporarily unavailable.</div>';
+
+    console.error(error);
+
+    return;
+
+  }
+
+
+  renderReviews(data || []);
+
+}
+
+
+/* =====================================================
+   DEMO / LOCAL REVIEWS
+===================================================== */
+
+function loadDemoReviews(){
+
+  const reviews =
+  JSON.parse(
+    localStorage.getItem(
+      "ay_reviews"
+    ) || "[]"
+  );
+
+
+  const approved =
+  reviews.filter(
+    x=>x.approved!==false
+  );
+
+
+  renderReviews(approved);
+
+}
+
+
+/* =====================================================
+   RENDER REVIEWS
+===================================================== */
+
+function renderReviews(reviews){
+
+  const grid =
+  document.getElementById(
+    "reviewGrid"
+  );
+
+
+  if(!grid)return;
+
+
+  if(!reviews.length){
+
+    grid.innerHTML = `
+      <div class="no-reviews">
+        <strong>Be the first to share your experience.</strong>
+        <br>
+        We would love to hear from you.
+      </div>
+    `;
+
+    return;
+
+  }
+
+
+  grid.innerHTML =
+  reviews.map(review=>{
+
+    const stars =
+    "★".repeat(
+      Number(review.rating)
+    )+
+    "☆".repeat(
+      5-Number(review.rating)
+    );
+
+
+    const date =
+    review.created_at
+    ?
+    new Date(
+      review.created_at
+    ).toLocaleDateString(
+      "en-NG",
+      {
+        day:"numeric",
+        month:"long",
+        year:"numeric"
+      }
+    )
+    :
+    "";
+
+
+    return `
+
+      <article class="review-card">
+
+        <div class="stars">
+          ${stars}
+        </div>
+
+        <div class="review-text">
+          “${escapeHTML(
+            review.review_text
+          )}”
+        </div>
+
+        <div class="review-name">
+          ${escapeHTML(
+            review.customer_name
+          )}
+        </div>
+
+        <div class="review-date">
+          ${date}
+        </div>
+
+      </article>
+
+    `;
+
+  }).join("");
+
+}
+
+
+/* =====================================================
+   ADMIN LOGIN
+===================================================== */
+
+document
+.getElementById("adminLoginForm")
+.addEventListener(
+"submit",
+async function(e){
+
+  e.preventDefault();
+
+
+  const status =
+  document.getElementById(
+    "adminLoginStatus"
+  );
+
+
+  const email =
+  document.getElementById(
+    "adminEmail"
+  ).value;
+
+
+  const password =
+  document.getElementById(
+    "adminPassword"
+  ).value;
+
+
+  if(!sb){
+
+    status.textContent =
+    "Connect Supabase first.";
+
+    return;
+
+  }
+
+
+  status.textContent =
+  "Signing in...";
+
+
+  const {data,error} =
+  await sb.auth.signInWithPassword({
+
+    email:email,
+
+    password:password
+
+  });
+
+
+  if(error){
+
+    status.textContent =
+    error.message;
+
+    return;
+
+  }
+
+
+  const user =
+  data.user;
+
+
+  const {data:profile,error:profileError} =
+  await sb
+  .from("profiles")
+  .select("role")
+  .eq("id",user.id)
+  .single();
+
+
+  if(
+    profileError ||
+    !profile ||
+    profile.role!=="admin"
+  ){
+
+    await sb.auth.signOut();
+
+
+    status.textContent =
+    "You do not have admin permission.";
+
+    return;
+
+  }
+
+
+  document
+  .getElementById("adminLoginBox")
+  .style.display="none";
+
+
+  document
+  .getElementById("adminDashboard")
+  .classList.add("visible");
+
+
+  loadAdminReviews();
+
+});
+
+
+/* =====================================================
+   ADMIN REVIEWS
+===================================================== */
+
+async function loadAdminReviews(){
+
+  if(!sb)return;
+
+
+  const {data,error} =
+  await sb
+  .from("reviews")
+  .select("*")
+  .order(
+    "created_at",
+    {ascending:false}
+  );
+
+
+  if(error){
+
+    console.error(error);
+
+    return;
+
+  }
+
+
+  const reviews =
+  data || [];
+
+
+  const total =
+  reviews.length;
+
+
+  const pending =
+  reviews.filter(
+    x=>!x.approved
+  ).length;
+
+
+  const approved =
+  reviews.filter(
+    x=>x.approved
+  ).length;
+
+
+  document
+  .getElementById(
+    "totalReviews"
+  ).textContent=total;
+
+
+  document
+  .getElementById(
+    "pendingReviews"
+  ).textContent=pending;
+
+
+  document
+  .getElementById(
+    "approvedReviews"
+  ).textContent=approved;
+
+
+  const table =
+  document.getElementById(
+    "adminReviewTable"
+  );
+
+
+  if(!reviews.length){
+
+    table.innerHTML=`
+      <tr>
+        <td colspan="5">
+          No reviews yet.
+        </td>
+      </tr>
+    `;
+
+    return;
+
+  }
+
+
+  table.innerHTML =
+  reviews.map(review=>{
+
+    const stars =
+    "★".repeat(
+      Number(review.rating)
+    );
+
+
+    return `
+
+      <tr>
+
+        <td>
+          <strong>
+            ${escapeHTML(
+              review.customer_name
+            )}
+          </strong>
+        </td>
+
+        <td>
+          ${stars}
+        </td>
+
+        <td>
+          ${escapeHTML(
+            review.review_text
+          )}
+        </td>
+
+        <td>
+          ${
+            review.approved
+            ?
+            '<span class="status">Approved</span>'
+            :
+            '<span class="status">Pending</span>'
+          }
+        </td>
+
+        <td>
+
+          ${
+            review.approved
+            ?
+
+            `<button
+              class="reject"
+              onclick="changeReviewStatus('${review.id}',false)"
+            >
+              Hide
+            </button>`
+
+            :
+
+            `<button
+              class="approve"
+              onclick="changeReviewStatus('${review.id}',true)"
+            >
+              Approve
+            </button>`
+          }
+
+        </td>
+
+      </tr>
+
+    `;
+
+  }).join("");
+
+}
+
+
+/* =====================================================
+   APPROVE / HIDE REVIEW
+===================================================== */
+
+async function changeReviewStatus(
+  id,
+  approved
+){
+
+  if(!sb)return;
+
+
+  const {error} =
+  await sb
+  .from("reviews")
+  .update({
+    approved:approved
+  })
+  .eq("id",id);
+
+
+  if(error){
+
+    alert(
+      "Unable to update review."
+    );
+
+    console.error(error);
+
+    return;
+
+  }
+
+
+  loadAdminReviews();
+
+  loadReviews();
+
+}
+
+
+/* =====================================================
+   ADMIN LOGOUT
+===================================================== */
+
+async function adminLogout(){
+
+  if(sb){
+
+    await sb.auth.signOut();
+
+  }
+
+
+  document
+  .getElementById("adminDashboard")
+  .classList.remove("visible");
+
+
+  document
+  .getElementById("adminLoginBox")
+  .style.display="block";
+
+
+  document
+  .getElementById("adminLoginForm")
+  .reset();
+
+
+  showPage("home");
+
+}
+
+
+/* =====================================================
+   SECURITY / HTML ESCAPING
+===================================================== */
+
+function escapeHTML(value){
+
+  return String(
+    value ?? ""
+  ).replace(
+    /[&<>"']/g,
+    function(char){
+
+      return {
+
+        "&":"&amp;",
+        "<":"&lt;",
+        ">":"&gt;",
+        '"':"&quot;",
+        "'":"&#039;"
+
+      }[char];
+
+    }
+  );
+
+}
+
+
+/* =====================================================
+   HASH NAVIGATION
+===================================================== */
+
+function loadHash(){
+
+  const page =
+  window.location.hash
+  .replace("#","");
+
+
+  const pages=[
+    "home",
+    "about",
+    "products",
+    "services",
+    "gallery",
+    "reviews",
+    "contact",
+    "support",
+    "admin"
+  ];
+
+
+  if(
+    pages.includes(page)
+  ){
+
+    showPage(page);
+
+  }else{
+
+    showPage("home");
+
+  }
+
+}
+
+
+window.addEventListener(
+  "hashchange",
+  loadHash
+);
+
+
+/* =====================================================
+   YEAR
+===================================================== */
+
+document
+.getElementById("year")
+.textContent =
+new Date().getFullYear();
+
+
+/* =====================================================
+   START
+===================================================== */
+
+if(
+  window.location.hash
+){
+
+  loadHash();
+
+}else{
+
+  showPage("home");
+
+}
+
+</script>
+
+</body>
+</html>
